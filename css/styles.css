@@ -145,14 +145,14 @@ body {
   margin-top: 3rem;
 }
 
-.section h2 {
+.section__title {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.4;
   color: var(--color-text-heading);
 }
 
-.section .description {
+.section__description {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.8;
