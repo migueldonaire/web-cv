@@ -58,16 +58,22 @@
   --font-main: "Inter", sans-serif;
 
   /* Texto */
-  --color-text-heading: #111111;   /* nombre, títulos de sección y de puesto */
-  --color-text-body: #555555;      /* párrafos, subtítulo, ubicación */
-  --color-text-meta: #6d6d6d;      /* fechas: información secundaria */
+  --color-text-heading: #111111;
+  /* nombre, títulos de sección y de puesto */
+  --color-text-body: #555555;
+  /* párrafos, subtítulo, ubicación */
+  --color-text-meta: #6d6d6d;
+  /* fechas: información secundaria */
 
   /* Superficies */
-  --color-bg-page: #ffffff;        /* fondo de la página */
-  --color-bg-tag: #f6f6f6;         /* fondo de la píldora "website.com" */
+  --color-bg-page: #ffffff;
+  /* fondo de la página */
+  --color-bg-tag: #f6f6f6;
+  /* fondo de la píldora "website.com" */
 
   /* Bordes */
-  --color-border: #e5e5e5;         /* marco de las imágenes */
+  --color-border: #e5e5e5;
+  /* marco de las imágenes */
 }
 
 * {
@@ -106,7 +112,7 @@ body {
   margin-left: 1rem;
 }
 
-.profile__data > * {
+.profile__data>* {
   margin-bottom: 0.2rem;
 }
 
@@ -160,13 +166,13 @@ body {
 
 }
 
-.work-experience {
+.resume-item {
   display: flex;
   flex-direction: row;
   margin-top: 1rem;
 }
 
-.work-experience__date {
+.resume-item__date {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.8;
@@ -174,20 +180,41 @@ body {
   flex: 0 0 7rem;
 }
 
-.work-experience .details {
+.resume-item .details {
   flex: 1;
   min-width: 0;
 }
 
-.work-experience__title {
+.resume-item__title, .resume-item__link {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.8;
   color: var(--color-text-heading);
   overflow-wrap: break-word;
+  text-decoration: none;
 }
 
-.work-experience__location {
+.resume-item__link:hover{
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.resume-item__title__arrow {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .resume-item__title__arrow {
+    display: inline-block;
+    position: relative;
+    font-size: 11px;
+    bottom: 8px;
+    right: -2px;
+    width: 5px;
+  }
+}
+
+.resume-item__location {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.8;
@@ -209,5 +236,55 @@ body {
 @media (min-width: 768px) {
   .images-experience {
     flex-direction: row;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  text-decoration: none;
+  max-width: 15rem;
+}
+
+.card__image {
+  width: 100%;
+  height: 5.5rem;
+  object-fit: cover;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+}
+
+.card__title {
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.8;
+  color: var(--color-text-heading);
+}
+
+.card__meta {
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.8;
+  color: var(--color-text-meta);
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    max-width: 100%;
+  }
+
+  .card__image {
+    flex: 0 0 9.5rem;
+    height: auto;
   }
 }
