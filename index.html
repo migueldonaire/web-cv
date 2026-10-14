@@ -396,8 +396,20 @@
                 });
 
             </script>
+
         </main>
     </div>
+    <button class="portfolio__button portfolio__back-to-top portfolio__back-to-top--visible" id="back-to-top"
+        type="button" aria-label="Volver arriba" title="Volver arriba">↑</button>
+    <script>
+        const backToTop = document.querySelector("#back-to-top");
+        window.addEventListener("scroll", function () {
+            backToTop.classList.toggle("portfolio__back-to-top--visible", window.scrollY > 350);
+        });
+        backToTop.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
 </body>
 
 </html>
