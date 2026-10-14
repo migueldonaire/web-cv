@@ -185,7 +185,8 @@ body {
   min-width: 0;
 }
 
-.resume-item__title, .resume-item__link {
+.resume-item__title,
+.resume-item__link {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.8;
@@ -194,7 +195,7 @@ body {
   text-decoration: none;
 }
 
-.resume-item__link:hover{
+.resume-item__link:hover {
   text-decoration: underline;
   text-underline-offset: 6px;
 }
@@ -287,4 +288,58 @@ body {
     flex: 0 0 9.5rem;
     height: auto;
   }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2rem;
+  border: 1px solid #dedbd3;
+  border-radius: 1rem;
+  margin-top: 1.5rem;
+  background-color: #f7f5f0;
+}
+
+.contact-form__label {
+  font-weight: 700;
+  font-size: .9rem;
+}
+
+.contact-form__input {
+  padding: 8px 10px;
+  border: 1px solid #c9c6be;
+  border-radius: 9px;
+  background: #fff;
+  color: var(--ink);
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.contact-form__input--error {
+  outline: 0.5px solid red;
+}
+
+.contact-form__input:focus {
+  outline: 1px solid limegreen;
+}
+
+.contact-form__button-send {
+  border: 0;
+  border-radius: 999px;
+  background: var(--color-text-heading);
+  color: #fff;
+  padding: 12px 19px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .2s, background .2s, color .2s;
+  width: 12rem;
+  align-self: end;
+}
+
+.contact-form__error {
+  min-height: 1.2em;
+  color: #a32626;
+  font-size: .84rem;
+  margin-bottom: 0.5rem;
 }
